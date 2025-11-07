@@ -59,9 +59,9 @@ export const education = [
     id: 1,
     period: "2023 - 2025",
     school: "Université de la Nouvelle-Calédonie",
-    degree: "BUT MMI",
-    specialization: "Parcours Développement Web",
-    description: "Formation complète en multimédia et internet avec spécialisation en développement front-end",
+    degree: "Bachelor Universitaire de Technologie (BUT)",
+    specialization: "Métiers du Multimédia et de l'Internet",
+    description: "Compétences : développement web, création graphique, réalisation audiovisuelle, stratégie et techniques de communication",
     status: "En cours - 3ème année en alternance chez Skazy"
   },
   {
@@ -69,9 +69,18 @@ export const education = [
     period: "2020 - 2022",
     school: "Lycée du Grand Nouméa",
     degree: "Baccalauréat Général",
-    specialization: "NSI & LLCA",
-    description: "Spécialisée en Numérique et Science de l'Informatique & Littérature, Langues et Cultures de l'Antiquité",
-    status: "Obtenu avec mention Assez Bien"
+    specialization: "Spécialités NSI & LLCA",
+    description: "Numérique et Sciences de l'Informatique et Langue, Littérature et Culture de l'Antiquité",
+    status: "Mention Assez Bien"
+  },
+  {
+    id: 3,
+    period: "février 2022",
+    school: "Base Aérienne 186 Lieutenant Paul Klein",
+    degree: "PMI PDN",
+    specialization: "Défense Nationale - Armée de l'Air",
+    description: "Brevet de participation et de réussite à la Période Militaire Initiale de Perfectionnement à la Défense Nationale",
+    status: "Mention Bien"
   }
 ];
 
@@ -80,7 +89,8 @@ export const experiences = [
     id: 1,
     period: "Depuis Avril 2025",
     role: "Développeuse Web",
-    company: "Skazy", // À compléter avec le nom
+    company: "Skazy",
+    logo: "/logo-entreprise/skazy.png",
     type: "Alternance 3ème année",
     location: "Nouméa, Nouvelle-Calédonie",
     description: "Développement d'applications web en conditions réelles, travail en équipe sur des projets clients",
@@ -97,14 +107,16 @@ export const experiences = [
     id: 2,
     period: "Septembre - Novembre 2024",
     role: "Développeuse Web",
-    company: "Wel'Com", // À compléter
-    type: "Stage de 2ème année",
+    company: "Wel'Com",
+    logo: "/logo-entreprise/welcom.png",
+    type: "Stage de 2ème année - 2 mois",
     location: "Nouméa, Nouvelle-Calédonie",
-    description: "Développement web et découverte du monde professionnel du développement",
+    description: "Création et intégration de contenu web, maquettage de sites et accompagnement client",
     tasks: [
-      "Création de pages web responsive",
-      "Intégration HTML/CSS/JS",
-      "Tests et débogage"
+      "Création d'un site web WordPress pour l'entreprise",
+      "Conception de maquettes de sites web et refonte",
+      "Création et intégration de contenu",
+      "Accompagnement aux rendez-vous clients"
     ],
     current: false
   },
@@ -112,14 +124,16 @@ export const experiences = [
     id: 3,
     period: "Novembre - Décembre 2023",
     role: "Infographiste",
-    company: "Laboratoire interdisciplinaire de recherche en éducation (LIRE) de l'Université de NC", // À compléter
-    type: "Stage de 1ère année",
+    company: "LIRE - UNC",
+    logo: "/logo-entreprise/lire.png",
+    type: "Stage de 1ère année - 1 mois",
     location: "Nouvelle-Calédonie",
-    description: "Création graphique et découverte du design web",
+    description: "Vulgarisation scientifique et création graphique pour rendre les recherches accessibles au grand public",
     tasks: [
-      "Création de visuels",
-      "Retouche d'images",
-      "Maquettage web"
+      "Vulgarisation des recherches des doctorants sous forme d'infographies",
+      "Création de pictogrammes personnalisés",
+      "Design graphique pour la communication scientifique",
+      "Adaptation de contenus complexes pour tout public"
     ],
     current: false
   }
@@ -138,7 +152,7 @@ export const projects = [
       "Informations contextuelles",
       "Animations fluides"
     ],
-    image: "/projects/7wonders.jpg", // À ajouter dans /public/projects/
+    image: "/projects/7wonders3D.png", // À ajouter dans /public/projects/
     demoUrl: "", // Si disponible
     githubUrl: "", // Si disponible
     category: "3D/WebGL",
@@ -157,7 +171,7 @@ export const projects = [
       "Système de score",
       "Interaction gestuelle"
     ],
-    image: "/projects/qpuc-vr.jpg", // À ajouter
+    image: "/projects/qp1c.png", // À ajouter
     demoUrl: "",
     githubUrl: "",
     category: "VR/Gaming",
@@ -176,7 +190,7 @@ export const projects = [
       "Panier d'achat",
       "Design inspiré de One Piece"
     ],
-    image: "/projects/akuma.jpg", // À ajouter
+    image: "/projects/akmstore.png", // À ajouter
     demoUrl: "",
     githubUrl: "",
     category: "Web/E-commerce",

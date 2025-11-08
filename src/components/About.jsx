@@ -110,7 +110,7 @@ export default function About() {
           </motion.div>
 
           {/* Timeline des formations à droite */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             {education.map((edu, index) => (
               <motion.div
                 key={edu.id}
@@ -120,20 +120,20 @@ export default function About() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="relative"
               >
-                <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl shadow-lg border-l-4 border-purple-500 hover:shadow-xl hover:bg-white/10 transition-all">
-                  <div className="flex flex-wrap items-center justify-between mb-3">
-                    <span className="text-sm font-bold text-purple-400 bg-purple-500/20 px-3 py-1 rounded-full">{edu.period}</span>
+                <div className="bg-white/5 backdrop-blur-sm p-5 rounded-xl shadow-lg border-l-4 border-purple-500 hover:shadow-xl hover:bg-white/10 transition-all">
+                  <div className="flex flex-wrap items-center justify-between mb-2">
+                    <span className="text-xs font-bold text-purple-400 bg-purple-500/20 px-2.5 py-1 rounded-full">{edu.period}</span>
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-2">{edu.degree}</h4>
-                  <p className="text-lg font-medium text-gray-200 mb-2">{edu.school}</p>
-                  <p className="text-sm font-medium text-pink-400 mb-2">{edu.specialization}</p>
-                  <p className="text-gray-300 mb-2 text-sm">{edu.description}</p>
+                  <h4 className="text-lg font-bold text-white mb-1.5">{edu.degree}</h4>
+                  <p className="text-base font-medium text-gray-200 mb-1.5">{edu.school}</p>
+                  <p className="text-sm font-medium text-pink-400 mb-1.5">{edu.specialization}</p>
+                  <p className="text-gray-300 mb-1.5 text-sm">{edu.description}</p>
                   <p className="text-sm font-semibold text-purple-300">{edu.status}</p>
                 </div>
                 
                 {/* Ligne de connexion entre les items (sauf le dernier) */}
                 {index < education.length - 1 && (
-                  <div className="absolute left-0 top-full h-6 w-1 bg-gradient-to-b from-purple-500/50 to-transparent ml-3"></div>
+                  <div className="absolute left-0 top-full h-4 w-1 bg-gradient-to-b from-purple-500/50 to-transparent ml-3"></div>
                 )}
               </motion.div>
             ))}

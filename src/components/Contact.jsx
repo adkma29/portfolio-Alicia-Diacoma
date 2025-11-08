@@ -35,8 +35,11 @@ export default function Contact() {
             {/* Email */}
             <motion.a
               href={`mailto:${contact.email}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.2 }}
               className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm p-5 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20"
             >
               <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-4 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
@@ -51,8 +54,11 @@ export default function Contact() {
             {/* Phone */}
             <motion.a
               href={`tel:${contact.phone}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.2 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.2 }}
               className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm p-5 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20"
             >
               <div className="bg-gradient-to-br from-purple-600 to-purple-500 p-4 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
@@ -69,8 +75,11 @@ export default function Contact() {
               href={contact.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.2 }}
               className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm p-5 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20"
             >
               <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-4 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
@@ -87,8 +96,11 @@ export default function Contact() {
               href={contact.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.4 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.2 }}
               className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm p-5 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20"
             >
               <div className="bg-gradient-to-br from-purple-600 to-purple-500 p-4 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
@@ -103,10 +115,10 @@ export default function Contact() {
 
           {/* Location avec style amélioré */}
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             className="relative z-10 flex items-center justify-center gap-3 bg-white/5 backdrop-blur-sm px-6 py-4 rounded-2xl border border-purple-500/20 mx-auto max-w-md"
           >
             <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-2 rounded-lg">

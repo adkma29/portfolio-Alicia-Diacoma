@@ -28,8 +28,7 @@ export default function Projects() {
         Mes Projets
       </motion.h2>
 
-      {/* Carrousel principal */}
-      <div className="relative max-w-5xl mx-auto">
+      <div className="relative max-w-4xl mx-auto">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -37,11 +36,10 @@ export default function Projects() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
-            className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border-2 border-purple-500/30 rounded-3xl shadow-2xl overflow-hidden"
+            className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border-2 border-purple-500/30 rounded-2xl shadow-2xl overflow-hidden"
           >
             <div className="grid md:grid-cols-2 gap-0">
-              {/* Image du projet */}
-              <div className="relative h-96 md:h-auto bg-gradient-to-br from-purple-400 to-pink-400 overflow-hidden group">
+              <div className="relative h-80 md:h-auto bg-gradient-to-br from-purple-400 to-pink-400 overflow-hidden group">
                 {currentProject.image ? (
                   <img
                     src={currentProject.image}
@@ -52,52 +50,47 @@ export default function Projects() {
                     }}
                   />
                 ) : (
-                  <div className="flex items-center justify-center h-full text-white text-8xl font-bold">
+                  <div className="flex items-center justify-center h-full text-white text-6xl font-bold">
                     {currentProject.title.charAt(0)}
                   </div>
                 )}
-                {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
 
-              {/* Contenu du projet */}
-              <div className="p-8 md:p-10 flex flex-col justify-between">
+              <div className="p-6 md:p-8 flex flex-col justify-between">
                 <div>
-                  {/* Header */}
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-start justify-between mb-3">
                     <div>
-                      <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-bold mb-3">
+                      <span className="inline-block px-2.5 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-bold mb-2">
                         {currentProject.category}
                       </span>
-                      <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-1.5">
                         {currentProject.title}
                       </h3>
-                      <p className="text-lg font-medium text-pink-400 mb-4">
+                      <p className="text-base font-medium text-pink-400 mb-3">
                         {currentProject.subtitle}
                       </p>
                     </div>
                     {currentProject.year && (
-                      <span className="text-lg font-bold text-purple-400 bg-purple-500/20 px-3 py-1 rounded-lg">
+                      <span className="text-base font-bold text-purple-400 bg-purple-500/20 px-2.5 py-1 rounded-lg">
                         {currentProject.year}
                       </span>
                     )}
                   </div>
 
-                  {/* Description */}
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-300 mb-4 leading-relaxed text-sm">
                     {currentProject.description}
                   </p>
 
-                  {/* Caractéristiques */}
                   {currentProject.features && currentProject.features.length > 0 && (
-                    <div className="mb-6">
-                      <h4 className="text-sm font-bold text-purple-300 uppercase tracking-wide mb-3">
+                    <div className="mb-4">
+                      <h4 className="text-xs font-bold text-purple-300 uppercase tracking-wide mb-2">
                         Fonctionnalités clés :
                       </h4>
-                      <ul className="space-y-2">
+                      <ul className="space-y-1.5">
                         {currentProject.features.slice(0, 3).map((feature, idx) => (
-                          <li key={idx} className="text-sm text-gray-300 flex items-start">
-                            <span className="text-purple-400 mr-2 mt-0.5">▸</span>
+                          <li key={idx} className="text-xs text-gray-300 flex items-start">
+                            <span className="text-purple-400 mr-1.5 mt-0.5">▸</span>
                             <span>{feature}</span>
                           </li>
                         ))}
@@ -105,16 +98,15 @@ export default function Projects() {
                     </div>
                   )}
 
-                  {/* Technologies */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-bold text-purple-300 uppercase tracking-wide mb-3">
+                  <div className="mb-4">
+                    <h4 className="text-xs font-bold text-purple-300 uppercase tracking-wide mb-2">
                       Technologies utilisées :
                     </h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-1.5">
                       {currentProject.technologies.map((tech, idx) => (
                         <span
                           key={idx}
-                          className="px-3 py-1.5 bg-purple-900/40 text-purple-300 border border-purple-500/40 rounded-lg text-sm font-medium hover:bg-purple-800/50 transition-colors"
+                          className="px-2.5 py-1 bg-purple-900/40 text-purple-300 border border-purple-500/40 rounded-lg text-xs font-medium hover:bg-purple-800/50 transition-colors"
                         >
                           {tech}
                         </span>
@@ -123,16 +115,15 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* Boutons d'action */}
-                <div className="flex gap-3 pt-4 border-t border-purple-500/20">
+                <div className="flex gap-2.5 pt-3 border-t border-purple-500/20">
                   {currentProject.demoUrl && (
                     <a
                       href={currentProject.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-700 hover:to-pink-600 shadow-lg hover:shadow-purple-500/50 transition-all"
+                      className="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-xl font-semibold text-sm hover:from-purple-700 hover:to-pink-600 shadow-lg hover:shadow-purple-500/50 transition-all"
                     >
-                      <FaExternalLinkAlt size={16} />
+                      <FaExternalLinkAlt size={14} />
                       <span>Voir la démo</span>
                     </a>
                   )}
@@ -141,14 +132,14 @@ export default function Projects() {
                       href={currentProject.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gray-800 text-white rounded-xl font-semibold hover:bg-gray-900 border border-gray-700 hover:border-gray-600 transition-all"
+                      className="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 bg-gray-800 text-white rounded-xl font-semibold text-sm hover:bg-gray-900 border border-gray-700 hover:border-gray-600 transition-all"
                     >
-                      <FaGithub size={18} />
+                      <FaGithub size={16} />
                       <span>Voir le code</span>
                     </a>
                   )}
                   {!currentProject.demoUrl && !currentProject.githubUrl && (
-                    <div className="flex-1 px-6 py-3 bg-gray-100/10 text-gray-400 rounded-xl font-medium text-center border border-gray-500/20">
+                    <div className="flex-1 px-4 py-2.5 bg-gray-100/10 text-gray-400 rounded-xl font-medium text-center text-sm border border-gray-500/20">
                       {currentProject.completed ? "Projet terminé (non déployable)" : "Projet en cours de développement"}
                     </div>
                   )}

@@ -40,8 +40,6 @@ export const skills = {
     { name: "Adobe Suite", icon: "🖼️" },
     { name: "Canva", icon: "🎨" },
     { name: "GitLab", icon: "🦊" }
-  ],
-  softSkills: [
   ]
 };
 
@@ -169,7 +167,7 @@ export const projects = [
   {
     id: 3,
     title: "Convertisseur de Devises XPF",
-    subtitle: "Application web de conversion en temps réel des Francs Pacifiques (XPF) vers 12 devises internationales majeures",
+    subtitle: "Conversion en temps réel du Franc Pacifique vers 12 devises internationales",
     description: "Application Vue.js permettant de convertir instantanément des montants en Francs Pacifiques (XPF) vers 12 devises internationales (Dollar australien, néo-zélandais, fidjien, Baht thaïlandais, Vatu...). L'application récupère les taux de change en temps réel via l'API ExchangeRate-API et se met à jour automatiquement toutes les heures.",
     technologies: ["Vue.js 3", "Vue Router", "Vue CLI", "ExchangeRate-API", "FlagCDN", "CSS3"],
     features: [
@@ -189,7 +187,7 @@ export const projects = [
   {
     id: 4,
     title: "Question pour un Champion - VR",
-    subtitle: "Jeu quiz en réalité virtuelle pour Meta Quest 2",
+    subtitle: "Un quizz en réalité virtuelle sur l'IUT de la Nouvelle-Calédonie",
     description: "Jeu quiz VR développé avec Unity pour Meta Quest 2. Le projet intègre une connexion à une base de données MySQL pour récupérer les questions dynamiquement et sauvegarder les scores. Utilisation du XR Interaction Toolkit pour les interactions VR (pointeur laser, boutons 3D), clavier virtuel Oculus pour la saisie, et assets 3D personnalisés créés sous Blender.",
     technologies: ["Unity 2022.3", "C#", "XR Interaction Toolkit", "Meta Quest 2", "MySQL", "PHP API", "Blender"],
     features: [
@@ -233,25 +231,25 @@ export const socialLinks = [
   {
     name: "LinkedIn",
     url: contact.linkedinUrl,
-    icon: "linkedin", // Pour react-icons: FaLinkedin
+    icon: "linkedin",
     color: "#0077B5"
   },
   {
     name: "GitHub",
     url: contact.githubUrl,
-    icon: "github", // FaGithub
+    icon: "github",
     color: "#181717"
   },
   {
     name: "Email",
     url: `mailto:${contact.email}`,
-    icon: "email", // MdEmail
+    icon: "email",
     color: "#EA4335"
   },
   {
     name: "Phone",
     url: `tel:${contact.phone}`,
-    icon: "phone", // FaPhone
+    icon: "phone",
     color: "#25D366"
   }
 ];
@@ -272,21 +270,18 @@ export const ctaButtons = {
   }
 };
 
-// Configuration du site
 export const siteConfig = {
   title: "Portfolio - Alicia DIACOMA",
   description: "Portfolio de Alicia DIACOMA, développeuse web frontend spécialisée en React",
   keywords: "développeuse web, frontend, React, JavaScript, portfolio, Nouvelle-Calédonie",
   author: "Alicia DIACOMA",
-  siteUrl: "https://alicia-diacoma.dev", // À mettre à jour
-  image: "/og-image.jpg", // Image pour partage réseaux sociaux
-  
-  // Couleurs du thème (pour Tailwind config)
+  siteUrl: "https://alicia-diacoma.dev",
+  image: "/og-image.jpg",
   theme: {
-    primary: "#8B5CF6", // Violet
-    secondary: "#EC4899", // Rose
-    dark: "#1F2937", // Gris foncé
-    light: "#F9FAFB", // Blanc cassé
-    accent: "#10B981" // Vert pour accents
+    primary: "#8B5CF6",
+    secondary: "#EC4899",
+    dark: "#1F2937",
+    light: "#F9FAFB",
+    accent: "#10B981"
   }
 };

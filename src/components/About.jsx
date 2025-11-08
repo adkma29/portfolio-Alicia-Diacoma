@@ -90,7 +90,7 @@ export default function About() {
         transition={{ duration: 0.6 }}
         className="mb-20"
       >
-        <h3 className="text-3xl font-bold mb-6 text-purple-400">Mon parcours</h3>
+        <h3 className="text-3xl font-bold mb-6 text-purple-400">En route vers aujourd’hui</h3>
         
         <div className="grid md:grid-cols-[500px_1fr] gap-8 items-center">
           {/* Image 3D à gauche */}
@@ -149,7 +149,7 @@ export default function About() {
         transition={{ duration: 0.6 }}
         className="mb-12"
       >
-        <h3 className="text-3xl font-bold mb-8 text-purple-400 text-center">Mon expérience sur le terrain</h3>
+        <h3 className="text-3xl font-bold mb-6 text-purple-400">Mon expérience sur le terrain</h3>
         
         {/* Image 3D centrée au-dessus */}
         <motion.div

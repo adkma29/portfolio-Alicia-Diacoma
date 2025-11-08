@@ -22,84 +22,98 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="max-w-3xl mx-auto"
+        className="max-w-4xl mx-auto"
       >
-        <div className="relative bg-gradient-to-br from-[#74276c] via-[#c53364] to-[#fd8263] rounded-2xl shadow-2xl shadow-[#c53364]/50 p-8 md:p-12 text-white border border-[#fd8263]/30">
-          {/* Effet néon subtil */}
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#74276c]/20 to-[#fd8263]/20 blur-xl -z-10"></div>
-          
-          <p className="text-center text-lg md:text-xl mb-8">
-            Je suis disponible pour discuter de vos projets, opportunités de collaboration ou simplement échanger !
-          </p>
+        <div className="relative bg-gradient-to-br from-purple-900/40 via-purple-800/30 to-purple-900/40 backdrop-blur-xl rounded-3xl shadow-2xl shadow-purple-500/30 p-8 md:p-12 text-white border border-purple-500/30 overflow-hidden">
+          {/* Effets de fond animés */}
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-purple-500/10 to-purple-600/10"></div>
+          <div className="absolute top-0 right-0 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl -z-10"></div>
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl -z-10"></div>
 
           {/* Contact Info Grid */}
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="grid md:grid-cols-2 gap-5 mb-8 relative z-10">
             {/* Email */}
-            <a
+            <motion.a
               href={`mailto:${contact.email}`}
-              className="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl hover:bg-white/20 transition-all hover:scale-105"
+              whileHover={{ scale: 1.05, y: -5 }}
+              transition={{ duration: 0.2 }}
+              className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm p-5 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/20"
             >
-              <div className="bg-white/20 p-3 rounded-full">
+              <div className="bg-gradient-to-br from-purple-500 to-pink-500 p-4 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
                 <MdEmail size={24} />
               </div>
-              <div>
-                <p className="text-sm font-medium text-white/80">Email</p>
-                <p className="font-semibold">{contact.email}</p>
+              <div className="flex-1">
+                <p className="text-sm font-medium text-purple-300 mb-1">Email</p>
+                <p className="font-semibold text-white break-all">{contact.email}</p>
               </div>
-            </a>
+            </motion.a>
 
             {/* Phone */}
-            <a
+            <motion.a
               href={`tel:${contact.phone}`}
-              className="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl hover:bg-white/20 transition-all hover:scale-105"
+              whileHover={{ scale: 1.05, y: -5 }}
+              transition={{ duration: 0.2 }}
+              className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm p-5 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/20"
             >
-              <div className="bg-white/20 p-3 rounded-full">
-                <FaPhone size={20} />
+              <div className="bg-gradient-to-br from-pink-500 to-purple-500 p-4 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
+                <FaPhone size={22} />
               </div>
-              <div>
-                <p className="text-sm font-medium text-white/80">Téléphone</p>
-                <p className="font-semibold">{contact.phone}</p>
+              <div className="flex-1">
+                <p className="text-sm font-medium text-purple-300 mb-1">Téléphone</p>
+                <p className="font-semibold text-white">{contact.phone}</p>
               </div>
-            </a>
+            </motion.a>
 
             {/* LinkedIn */}
-            <a
+            <motion.a
               href={contact.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl hover:bg-white/20 transition-all hover:scale-105"
+              whileHover={{ scale: 1.05, y: -5 }}
+              transition={{ duration: 0.2 }}
+              className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm p-5 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/20"
             >
-              <div className="bg-white/20 p-3 rounded-full">
+              <div className="bg-gradient-to-br from-purple-500 to-pink-500 p-4 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
                 <FaLinkedin size={24} />
               </div>
-              <div>
-                <p className="text-sm font-medium text-white/80">LinkedIn</p>
-                <p className="font-semibold">{contact.linkedin}</p>
+              <div className="flex-1">
+                <p className="text-sm font-medium text-purple-300 mb-1">LinkedIn</p>
+                <p className="font-semibold text-white">{contact.linkedin}</p>
               </div>
-            </a>
+            </motion.a>
 
             {/* GitHub */}
-            <a
+            <motion.a
               href={contact.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl hover:bg-white/20 transition-all hover:scale-105"
+              whileHover={{ scale: 1.05, y: -5 }}
+              transition={{ duration: 0.2 }}
+              className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm p-5 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/20"
             >
-              <div className="bg-white/20 p-3 rounded-full">
+              <div className="bg-gradient-to-br from-pink-500 to-purple-500 p-4 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
                 <FaGithub size={24} />
               </div>
-              <div>
-                <p className="text-sm font-medium text-white/80">GitHub</p>
-                <p className="font-semibold">{contact.github}</p>
+              <div className="flex-1">
+                <p className="text-sm font-medium text-purple-300 mb-1">GitHub</p>
+                <p className="font-semibold text-white">{contact.github}</p>
               </div>
-            </a>
+            </motion.a>
           </div>
 
-          {/* Location */}
-          <div className="flex items-center justify-center gap-2 text-white/90">
-            <FaMapMarkerAlt size={18} />
-            <span className="text-lg">{personalInfo.location}</span>
-          </div>
+          {/* Location avec style amélioré */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="relative z-10 flex items-center justify-center gap-3 bg-white/5 backdrop-blur-sm px-6 py-4 rounded-2xl border border-purple-500/20 mx-auto max-w-md"
+          >
+            <div className="bg-gradient-to-br from-purple-500 to-pink-500 p-2 rounded-lg">
+              <FaMapMarkerAlt size={20} />
+            </div>
+            <span className="text-lg font-medium text-white">{personalInfo.location}</span>
+          </motion.div>
         </div>
       </motion.div>
     </div>

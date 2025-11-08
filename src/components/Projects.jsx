@@ -56,11 +56,6 @@ export default function Projects() {
                     {currentProject.title.charAt(0)}
                   </div>
                 )}
-                {currentProject.featured && (
-                  <span className="absolute top-4 right-4 px-4 py-2 bg-yellow-400 text-gray-800 text-sm font-bold rounded-full shadow-lg">
-                    ⭐ Projet Featured
-                  </span>
-                )}
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -154,7 +149,7 @@ export default function Projects() {
                   )}
                   {!currentProject.demoUrl && !currentProject.githubUrl && (
                     <div className="flex-1 px-6 py-3 bg-gray-100/10 text-gray-400 rounded-xl font-medium text-center border border-gray-500/20">
-                      Projet en cours de développement
+                      {currentProject.completed ? "Projet terminé (non déployable)" : "Projet en cours de développement"}
                     </div>
                   )}
                 </div>

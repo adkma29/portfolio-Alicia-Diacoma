@@ -1,6 +1,3 @@
-// 📁 src/data/content.js
-// Toutes les données de ton portfolio centralisées ici !
-
 export const personalInfo = {
   name: "Alicia DIACOMA",
   title: "Développeuse web frontend",
@@ -45,12 +42,6 @@ export const skills = {
     { name: "GitLab", icon: "🦊" }
   ],
   softSkills: [
-    "Travail en équipe",
-    "Créativité",
-    "Résolution de problèmes",
-    "Communication",
-    "Gestion de projet",
-    "Apprentissage continu"
   ]
 };
 
@@ -59,9 +50,9 @@ export const education = [
     id: 1,
     period: "2023 - 2025",
     school: "Université de la Nouvelle-Calédonie",
-    degree: "Bachelor Universitaire de Technologie (BUT)",
-    specialization: "Métiers du Multimédia et de l'Internet",
-    description: "Compétences : développement web, création graphique, réalisation audiovisuelle, stratégie et techniques de communication",
+    degree: "Bachelor Universitaire de Technologie des Métiers du Multimédia et de l'Internet (BUT MMI)",
+    specialization: "Développement web",
+    description: "Compétences : développement web, création graphique, réalisation audiovisuelle, stratégie et techniques de communication • Certifiée PIX",
     status: "En cours - 3ème année en alternance chez Skazy"
   },
   {
@@ -70,7 +61,7 @@ export const education = [
     school: "Lycée du Grand Nouméa",
     degree: "Baccalauréat Général",
     specialization: "Spécialités NSI & LLCA",
-    description: "Numérique et Sciences de l'Informatique et Langue, Littérature et Culture de l'Antiquité",
+    description: "Numérique et Sciences de l'Informatique et Langue, Littérature et Culture de l'Antiquité • Certifiée PIX",
     status: "Mention Assez Bien"
   },
   {
@@ -152,34 +143,73 @@ export const projects = [
       "Informations contextuelles",
       "Animations fluides"
     ],
-    image: "/projects/7wonders3D.png", // À ajouter dans /public/projects/
-    demoUrl: "", // Si disponible
-    githubUrl: "", // Si disponible
+    image: "/projects/7wonders3D.png",
+    demoUrl: "https://7wonders3d2025.netlify.app/",
+    githubUrl: "https://github.com/adkma29/7wonders3d",
     category: "3D/WebGL",
-    year: "2024",
-    featured: true
+    year: "2025"
   },
   {
     id: 2,
-    title: "Question pour un Champion - VR",
-    subtitle: "Un quiz en réalité virtuelle",
-    description: "Quiz interactif façon Questions pour un champion, sur le thème de l'IUT, développé en réalité virtuelle pour une expérience immersive.",
-    technologies: ["Unity", "C#", "VR SDK", "3D Modeling"],
+    title: "3d-Scene-React-Three",
+    subtitle: "Scène 3D interactive avec React Three Fiber",
+    description: "Application React permettant d'afficher et de manipuler des modèles 3D dans le navigateur grâce à Three.js et React Three Fiber.",
+    technologies: ["React", "React Three Fiber", "Three.js"],
     features: [
-      "Environnement VR immersif",
-      "Questions thématiques IUT",
-      "Système de score",
-      "Interaction gestuelle"
+      "Affichage de modèles 3D",
+      "Navigation interactive",
+      "Interface React moderne"
     ],
-    image: "/projects/qp1c.png", // À ajouter
-    demoUrl: "",
-    githubUrl: "",
-    category: "VR/Gaming",
-    year: "2024",
-    featured: true
+    image: "/projects/scene3d.png",
+    demoUrl: "https://mascene3doff.netlify.app/",
+    githubUrl: "https://github.com/adkma29/3d-Scene-React-Three.git",
+    category: "3D/React",
+    year: "2025"
   },
   {
     id: 3,
+    title: "Convertisseur de Devises XPF",
+    subtitle: "Application web de conversion en temps réel des Francs Pacifiques (XPF) vers 12 devises internationales majeures",
+    description: "Application Vue.js permettant de convertir instantanément des montants en Francs Pacifiques (XPF) vers 12 devises internationales (Dollar australien, néo-zélandais, fidjien, Baht thaïlandais, Vatu...). L'application récupère les taux de change en temps réel via l'API ExchangeRate-API et se met à jour automatiquement toutes les heures.",
+    technologies: ["Vue.js 3", "Vue Router", "Vue CLI", "ExchangeRate-API", "FlagCDN", "CSS3"],
+    features: [
+      "Conversion en temps réel de XPF vers 12 devises internationales",
+      "Saisie dynamique du montant avec calcul instantané",
+      "Affichage des drapeaux de pays pour chaque devise",
+      "Mise à jour automatique des taux de change toutes les heures",
+      "Interface responsive avec design moderne",
+      "Gestion d'erreurs lors de la récupération des données API"
+    ],
+    image: "/projects/convertisseurdevise.png",
+    demoUrl: "https://convertdevisenc.netlify.app/",
+    githubUrl: "https://github.com/adkma29/project-vue-diacoma-alicia",
+    category: "Web/Vue.js",
+    year: "2025"
+  },
+  {
+    id: 4,
+    title: "Question pour un Champion - VR",
+    subtitle: "Jeu quiz en réalité virtuelle pour Meta Quest 2",
+    description: "Jeu quiz VR développé avec Unity pour Meta Quest 2. Le projet intègre une connexion à une base de données MySQL pour récupérer les questions dynamiquement et sauvegarder les scores. Utilisation du XR Interaction Toolkit pour les interactions VR (pointeur laser, boutons 3D), clavier virtuel Oculus pour la saisie, et assets 3D personnalisés créés sous Blender.",
+    technologies: ["Unity 2022.3", "C#", "XR Interaction Toolkit", "Meta Quest 2", "MySQL", "PHP API", "Blender"],
+    features: [
+      "Environnement VR immersif avec suivi tête/mains",
+      "Interactions via pointeur laser et boutons 3D animés",
+      "Connexion base de données MySQL via API PHP",
+      "Questions dynamiques sur le thème de l'IUT",
+      "Système de score avec sauvegarde serveur",
+      "Clavier virtuel Oculus intégré",
+      "Assets 3D personnalisés (Blender)"
+    ],
+    image: "/projects/qp1c.png",
+    demoUrl: null,
+    githubUrl: null,
+    category: "VR/Gaming",
+    year: "2025",
+    completed: true
+  },
+  {
+    id: 5,
     title: "Akuma no Mi Store",
     subtitle: "Boutique de fruits du démon",
     description: "Site e-commerce fictif inspiré de l'univers One Piece, permettant d'acheter des fruits du démon avec leurs pouvoirs uniques.",
@@ -190,12 +220,12 @@ export const projects = [
       "Panier d'achat",
       "Design inspiré de One Piece"
     ],
-    image: "/projects/akmstore.png", // À ajouter
-    demoUrl: "",
-    githubUrl: "",
+    image: "/projects/akmstore.png",
+    demoUrl: null,
+    githubUrl: null,
     category: "Web/E-commerce",
-    year: "2023",
-    featured: true
+    year: "2024",
+    completed: true
   }
 ];
 

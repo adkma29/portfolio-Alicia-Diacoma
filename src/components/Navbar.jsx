@@ -20,21 +20,27 @@ export default function Navbar() {
       smooth={true}
       offset={-80}
       duration={500}
-      className="cursor-pointer text-gray-300 hover:text-purple-400 transition-colors"
+      activeClass="text-purple-400 font-semibold"
+      className="cursor-pointer text-gray-300 hover:text-purple-400 transition-all duration-300 relative group"
       onClick={() => setIsOpen(false)}
     >
       {children}
+      {/* Underline effect */}
+      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all duration-300"></span>
     </Link>
   );
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all ${
-        scrolled ? "bg-black/70 backdrop-blur-md shadow-lg border-b border-purple-500/20" : "bg-transparent"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled 
+          ? "bg-black/80 backdrop-blur-xl shadow-xl shadow-purple-500/10 border-b border-purple-500/30" 
+          : "bg-gradient-to-b from-black/50 to-transparent backdrop-blur-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
           <div className="flex items-center">
             <a
               href="/"
@@ -48,40 +54,90 @@ export default function Navbar() {
               <img
                 src="/logo-alicia.png"
                 alt={`${personalInfo.name} logo`}
-                className="h-10 w-10 rounded-full object-cover"
+                className="h-12 w-12 rounded-full object-cover"
               />
-              <span className="hidden sm:block font-semibold text-white">
-                {personalInfo.name.split(" ")[0]}
+              <span className="hidden sm:block font-semibold text-white text-lg">
+                {personalInfo.name}
               </span>
             </a>
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8 text-base font-medium">
             <NavLink to="home">Home</NavLink>
             <NavLink to="about">À propos</NavLink>
             <NavLink to="projects">Projets</NavLink>
             <NavLink to="contact">Contact</NavLink>
           </div>
 
+          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen((v) => !v)}
-              className="p-2 rounded-md text-gray-300 hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="p-2.5 rounded-lg text-gray-300 hover:text-purple-400 hover:bg-purple-500/10 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all duration-300"
               aria-label="Toggle menu"
             >
-              {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+              {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
-      <div className={`md:hidden transition-all ${isOpen ? "max-h-screen py-4" : "max-h-0 overflow-hidden"}`}>
-        <div className="px-4 pb-6 flex flex-col gap-4 bg-black/90 backdrop-blur-md border-t border-purple-500/20" onClick={() => setIsOpen(false)}>
-          <NavLink to="home">Home</NavLink>
-          <NavLink to="about">À propos</NavLink>
-          <NavLink to="projects">Projets</NavLink>
-          <NavLink to="contact">Contact</NavLink>
+      {/* Mobile Menu */}
+      <div 
+        className={`md:hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+        }`}
+      >
+        <div className="px-6 py-6 flex flex-col gap-5 bg-black/95 backdrop-blur-xl border-t border-purple-500/30 shadow-lg">
+          <Link
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+            activeClass="text-purple-400 font-semibold"
+            className="cursor-pointer text-gray-300 hover:text-purple-400 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-purple-500/10 font-medium"
+            onClick={() => setIsOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+            activeClass="text-purple-400 font-semibold"
+            className="cursor-pointer text-gray-300 hover:text-purple-400 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-purple-500/10 font-medium"
+            onClick={() => setIsOpen(false)}
+          >
+            À propos
+          </Link>
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+            activeClass="text-purple-400 font-semibold"
+            className="cursor-pointer text-gray-300 hover:text-purple-400 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-purple-500/10 font-medium"
+            onClick={() => setIsOpen(false)}
+          >
+            Projets
+          </Link>
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+            activeClass="text-purple-400 font-semibold"
+            className="cursor-pointer text-gray-300 hover:text-purple-400 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-purple-500/10 font-medium"
+            onClick={() => setIsOpen(false)}
+          >
+            Contact
+          </Link>
         </div>
       </div>
     </nav>

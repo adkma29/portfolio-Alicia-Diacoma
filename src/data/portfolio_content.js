@@ -131,6 +131,26 @@ export const experiences = [
 export const projects = [
   {
     id: 1,
+    title: "Avengers Alicia - Système de Gestion Culturelle",
+    subtitle: "Application Symfony multilingue de gestion de bibliothèque et collections",
+    description: "Application web complète développée avec Symfony dans le cadre du BUT MMI 3. Elle propose un système de gestion multi-entités (bibliothèque, marque-pages, collections naturelles) avec une architecture MVC robuste. L'application intègre un système d'internationalisation FR/EN avec URLs localisées et utilise Doctrine ORM pour gérer les relations complexes entre entités.",
+    technologies: ["Symfony 7.2", "PHP 8.2", "Doctrine ORM", "Twig", "MySQL", "Symfony Translation", "Composer"],
+    features: [
+      "Gestion complète de bibliothèque avec CRUD livres/auteurs et relations Doctrine",
+      "Système de marque-pages personnalisables avec mots-clés",
+      "Internationalisation FR/EN avec basculement automatique et routes localisées",
+      "Requêtes avancées : filtrage par lettre, recherche par nombre de livres",
+      "Formulaires Symfony typés avec validation et messages flash traduits"
+    ],
+    image: "/projects/avengers-alicia.png",
+    demoUrl: null,
+    githubUrl: "https://github.com/adkma29/Symfony-dans-tous-ses-tats.git",
+    category: "Développement Web",
+    year: "2024",
+    completed: true
+  },
+  {
+    id: 2,
     title: "7 Wonders 3D",
     subtitle: "Un globe pour voyager à travers les merveilles du monde",
     description: "Application interactive 3D permettant de découvrir les merveilles du monde, d'hier à aujourd'hui, à travers un globe terrestre navigable.",
@@ -148,7 +168,7 @@ export const projects = [
     year: "2025"
   },
   {
-    id: 2,
+    id: 3,
     title: "3d-Scene-React-Three",
     subtitle: "Scène 3D interactive avec React Three Fiber",
     description: "Application React permettant d'afficher et de manipuler des modèles 3D dans le navigateur grâce à Three.js et React Three Fiber.",
@@ -165,7 +185,7 @@ export const projects = [
     year: "2025"
   },
   {
-    id: 3,
+    id: 4,
     title: "Convertisseur de Devises XPF",
     subtitle: "Conversion en temps réel du Franc Pacifique vers 12 devises internationales",
     description: "Application Vue.js permettant de convertir instantanément des montants en Francs Pacifiques (XPF) vers 12 devises internationales (Dollar australien, néo-zélandais, fidjien, Baht thaïlandais, Vatu...). L'application récupère les taux de change en temps réel via l'API ExchangeRate-API et se met à jour automatiquement toutes les heures.",
@@ -185,7 +205,7 @@ export const projects = [
     year: "2025"
   },
   {
-    id: 4,
+    id: 5,
     title: "Question pour un Champion - VR",
     subtitle: "Un quizz en réalité virtuelle sur l'IUT de la Nouvelle-Calédonie",
     description: "Jeu quiz VR développé avec Unity pour Meta Quest 2. Le projet intègre une connexion à une base de données MySQL pour récupérer les questions dynamiquement et sauvegarder les scores. Utilisation du XR Interaction Toolkit pour les interactions VR (pointeur laser, boutons 3D), clavier virtuel Oculus pour la saisie, et assets 3D personnalisés créés sous Blender.",
@@ -207,7 +227,7 @@ export const projects = [
     completed: true
   },
   {
-    id: 5,
+    id: 6,
     title: "Akuma no Mi Store",
     subtitle: "Boutique de fruits du démon",
     description: "Site e-commerce fictif inspiré de l'univers One Piece, permettant d'acheter des fruits du démon avec leurs pouvoirs uniques.",

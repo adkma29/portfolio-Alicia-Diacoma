@@ -5,7 +5,7 @@ export const personalInfo = {
   age: 21,
   location: "Païta, Tribu de Naniouni",
   description: "Je m’appelle Alicia Diacoma, fraîchement entrée dans la vingtaine et sur le point de boucler ma troisième année de Bachelor Universitaire de Technologie des Métiers du Multimédia et de l’Internet, avec une spécialisation en développement web.",
-  traits: ["Autonome", "Ponctuelle", "Empathie", "Sociable"],
+  traits: ["Autonome", "Ponctuelle", "Empathique", "Sociable"],
   status: "Étudiante en 3ème année de BUT MMI",
   bio: "Une petite kanak du Pacifique, passionnée de développement front-end et toujours partante pour un défi créatif. Du simple site vitrine à l’univers immersif de la réalité virtuelle, j’aime explorer toutes les facettes du web moderne — là où design, code et curiosité se rencontrent.",
   bioabout: "Curieuse de nature, j’aime explorer, apprendre et toucher à tout — du code à la création, en passant par tout ce qui éveille ma créativité. Découvrir, tester, comprendre, puis créer : c’est ce qui me motive chaque jour.\n\nDéterminée et passionnée, je poursuis mes objectifs avec enthousiasme… et toujours le sourire 😁 "

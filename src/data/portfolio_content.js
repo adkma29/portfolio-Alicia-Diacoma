@@ -142,7 +142,7 @@ export const projects = [
       "Requêtes avancées : filtrage par lettre, recherche par nombre de livres",
       "Formulaires Symfony typés avec validation et messages flash traduits"
     ],
-    image: "/avengers-alicia.webp",
+    image: "/projects/avengers-alicia.webp",
     demoUrl: null,
     githubUrl: "https://github.com/adkma29/Symfony-dans-tous-ses-tats.git",
     category: "Développement Web",

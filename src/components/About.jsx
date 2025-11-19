@@ -102,7 +102,7 @@ export default function About() {
             className="relative flex items-center justify-center"
           >
             <img
-              src="/alicia-education.png"
+              src="/alicia-education.webp"
               alt="Alicia 3D"
               className="w-full h-full object-contain rounded-2xl"
               style={{ filter: 'drop-shadow(0 0 40px rgba(168, 85, 247, 0.6))' }}
@@ -160,7 +160,7 @@ export default function About() {
           className="flex justify-center mb-12"
         >
           <img
-            src="/alicia-experience.png"
+            src="/alicia-experience.webp"
             alt="Alicia 3D"
             className="w-96 md:w-[500px] h-auto object-contain rounded-2xl"
             style={{ filter: 'drop-shadow(0 0 40px rgba(168, 85, 247, 0.6))' }}

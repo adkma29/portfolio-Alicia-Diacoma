@@ -52,7 +52,7 @@ export default function Navbar() {
               }}
             >
               <img
-                src="/logo-alicia.png"
+                src="/logo-alicia.webp"
                 alt={`${personalInfo.name} logo`}
                 className="h-12 w-12 rounded-full object-cover"
               />

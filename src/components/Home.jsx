@@ -57,7 +57,7 @@ export default function Home() {
             {/* Glow effect autour de l'avatar */}
             <div></div>
             <img
-              src="/alicia3d.png"
+              src="/alicia3d.webp"
               alt={personalInfo.name}
             />
           </motion.div>

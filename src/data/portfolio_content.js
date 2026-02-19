@@ -3,7 +3,7 @@ export const personalInfo = {
   title: "Développeuse web frontend",
   tagline: "Hey, moi c’est Alicia !",
   age: 21,
-  location: "Nouméa, 2 Rue Bis Clemenceau - Résidence Pacifique Arcade",
+  location: "Nouméa,Centre-Ville",
   description: "Je m’appelle Alicia Diacoma, fraîchement entrée dans la vingtaine et sur le point de boucler ma troisième année de Bachelor Universitaire de Technologie des Métiers du Multimédia et de l’Internet, avec une spécialisation en développement web.",
   traits: ["Autonome", "Ponctuelle", "Empathique", "Sociable"],
   status: "Étudiante en 3ème année de BUT MMI",

@@ -4,7 +4,7 @@ export const personalInfo = {
   tagline: "Hey, moi c’est Alicia !",
   age: 21,
   location: "Nouméa, Centre-Ville",
-  description: "Je m’appelle Alicia Diacoma, fraîchement entrée dans la vingtaine et sur le point de boucler ma troisième année de Bachelor Universitaire de Technologie des Métiers du Multimédia et de l’Internet, avec une spécialisation en développement web.",
+  description: "Je m’appelle Alicia Diacoma, fraîchement entrée dans la vingtaine et je viens de boucler ma troisième année de Bachelor Universitaire de Technologie des Métiers du Multimédia et de l’Internet, avec une spécialisation en développement web.",
   traits: ["Autonome", "Ponctuelle", "Empathique", "Sociable"],
   status: "Étudiante en 3ème année de BUT MMI",
   bio: "Une petite kanak du Pacifique, passionnée de développement front-end et toujours partante pour un défi créatif. Du simple site vitrine à l’univers immersif de la réalité virtuelle, j’aime explorer toutes les facettes du web moderne — là où design, code et curiosité se rencontrent.",

@@ -51,7 +51,7 @@ export const education = [
     degree: "Bachelor Universitaire de Technologie des Métiers du Multimédia et de l'Internet (BUT MMI)",
     specialization: "Développement web",
     description: "Compétences : développement web, création graphique, réalisation audiovisuelle, stratégie et techniques de communication • Certifiée PIX",
-    status: "En cours - 3ème année en alternance chez Skazy"
+    status: "Fraichement diplômée 🎓"
   },
   {
     id: 2,

@@ -76,15 +76,15 @@ export const education = [
 export const experiences = [
   {
     id: 1,
-    period: "Depuis Avril 2025",
+    period: "Avril 2025 - Mars 2026",
     role: "Développeuse Web",
     company: "Skazy",
     logo: "/logo-entreprise/skazy.webp",
-    type: "Alternance 3ème année",
+    type: "Alternance 3ème année - 1 an",
     location: "Nouméa, Nouvelle-Calédonie",
-    description: "Développement d'applications web en conditions réelles, travail en équipe sur des projets clients",
+    description: "Développement et maintenance d'applications web en conditions réelles, travail en équipe sur des projets clients",
     tasks: [
-      "Développement front-end et un peu de back-end",
+      "Développement front-end et de back-end",
       "Maintenance et optimisation de produit tel qu'Optimal RH",
       "Travail collaboratif en équipe",
       "Participation à des réunions agiles",

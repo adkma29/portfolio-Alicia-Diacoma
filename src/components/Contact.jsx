@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { FaLinkedin, FaGithub, FaMapMarkerAlt } from "react-icons/fa";
 import { contact, personalInfo } from "../data/portfolio_content";
 
 export default function Contact() {
@@ -12,9 +12,9 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl font-bold text-center mb-16 text-white"
+        className="text-4xl md:text-5xl font-bold text-center mb-10 text-white"
       >
-        Contactez-moi
+        <span role="img" aria-label="enveloppe">📬</span> Envoyez-moi un message !
       </motion.h2>
 
       <motion.div
@@ -30,104 +30,140 @@ export default function Contact() {
           <div className="absolute top-0 right-0 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl -z-10"></div>
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl -z-10"></div>
 
-          {/* Contact Info Grid */}
-          <div className="grid md:grid-cols-2 gap-5 mb-8 relative z-10">
-            {/* Email */}
+          {/* Formulaire fun */}
+          <ContactForm />
+
+          {/* Coordonnées (sauf téléphone) */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-8">
             <motion.a
               href={`mailto:${contact.email}`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm p-5 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20"
+              className="flex items-center gap-3 bg-white/5 backdrop-blur-sm px-6 py-4 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20"
             >
-              <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-4 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
-                <MdEmail size={24} />
+              <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-3 rounded-xl">
+                <MdEmail size={22} />
               </div>
-              <div className="flex-1">
-                <p className="text-sm font-medium text-purple-300 mb-1">Email</p>
-                <p className="font-semibold text-white break-all">{contact.email}</p>
-              </div>
+              <span className="font-semibold text-white">{contact.email}</span>
             </motion.a>
-
-            {/* Phone */}
-            <motion.a
-              href={`tel:${contact.phone}`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm p-5 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20"
-            >
-              <div className="bg-gradient-to-br from-purple-600 to-purple-500 p-4 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
-                <FaPhone size={22} />
-              </div>
-              <div className="flex-1">
-                <p className="text-sm font-medium text-purple-300 mb-1">Téléphone</p>
-                <p className="font-semibold text-white">{contact.phone}</p>
-              </div>
-            </motion.a>
-
-            {/* LinkedIn */}
             <motion.a
               href={contact.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.3 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm p-5 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20"
+              className="flex items-center gap-3 bg-white/5 backdrop-blur-sm px-6 py-4 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20"
             >
-              <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-4 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
-                <FaLinkedin size={24} />
+              <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-3 rounded-xl">
+                <FaLinkedin size={22} />
               </div>
-              <div className="flex-1">
-                <p className="text-sm font-medium text-purple-300 mb-1">LinkedIn</p>
-                <p className="font-semibold text-white">{contact.linkedin}</p>
-              </div>
+              <span className="font-semibold text-white">{contact.linkedin}</span>
             </motion.a>
-
-            {/* GitHub */}
             <motion.a
               href={contact.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.4 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm p-5 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20"
+              className="flex items-center gap-3 bg-white/5 backdrop-blur-sm px-6 py-4 rounded-2xl hover:bg-white/10 transition-all border border-purple-500/20 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20"
             >
-              <div className="bg-gradient-to-br from-purple-600 to-purple-500 p-4 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
-                <FaGithub size={24} />
+              <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-3 rounded-xl">
+                <FaGithub size={22} />
               </div>
-              <div className="flex-1">
-                <p className="text-sm font-medium text-purple-300 mb-1">GitHub</p>
-                <p className="font-semibold text-white">{contact.github}</p>
-              </div>
+              <span className="font-semibold text-white">{contact.github}</span>
             </motion.a>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="flex items-center gap-3 bg-white/5 backdrop-blur-sm px-6 py-4 rounded-2xl border border-purple-500/20"
+            >
+              <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-2 rounded-lg">
+                <FaMapMarkerAlt size={20} />
+              </div>
+              <span className="font-medium text-white">{personalInfo.location}</span>
+            </motion.div>
           </div>
-
-          {/* Location avec style amélioré */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="relative z-10 flex items-center justify-center gap-3 bg-white/5 backdrop-blur-sm px-6 py-4 rounded-2xl border border-purple-500/20 mx-auto max-w-md"
-          >
-            <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-2 rounded-lg">
-              <FaMapMarkerAlt size={20} />
-            </div>
-            <span className="text-lg font-medium text-white">{personalInfo.location}</span>
-          </motion.div>
         </div>
       </motion.div>
     </div>
   );
 }
+
+// Formulaire fun
+const ContactForm = () => {
+  const [subject, setSubject] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  const [sent, setSent] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+    window.location.href = `mailto:tchaniadkma29@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    setTimeout(() => {
+      setSent(true);
+      setLoading(false);
+    }, 1200);
+  };
+
+  if (sent) {
+    return (
+      <motion.div
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1.1, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        className="flex flex-col items-center justify-center py-12"
+      >
+        <span className="text-6xl mb-4 animate-bounce">🎉</span>
+        <h3 className="text-2xl font-bold text-purple-400 mb-2">Message envoyé !</h3>
+        <p className="text-lg text-white mb-4">Merci pour votre contact, je reviens vers vous très vite !</p>
+        <button
+          className="px-6 py-2 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700 transition-all"
+          onClick={() => { setSent(false); setSubject(""); setMessage(""); }}
+        >Envoyer un autre message</button>
+      </motion.div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="max-w-xl mx-auto bg-white/5 backdrop-blur-xl rounded-2xl shadow-xl p-8 border border-purple-500/30 mb-8">
+      <div className="mb-6">
+        <label htmlFor="subject" className="block text-purple-300 font-semibold mb-2 text-lg">
+          <span role="img" aria-label="question">❓</span> Vous me contactez pour ?
+        </label>
+        <input
+          id="subject"
+          type="text"
+          value={subject}
+          onChange={e => setSubject(e.target.value)}
+          required
+          placeholder="Collab', question, projet, papotage..."
+          className="w-full px-4 py-3 rounded-lg bg-white/10 text-white border border-purple-500/20 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 outline-none transition-all text-lg"
+        />
+      </div>
+      <div className="mb-6">
+        <label htmlFor="message" className="block text-purple-300 font-semibold mb-2 text-lg">
+          <span role="img" aria-label="message">💬</span> Votre message
+        </label>
+        <textarea
+          id="message"
+          value={message}
+          onChange={e => setMessage(e.target.value)}
+          required
+          placeholder="Dites moi tout... 🤩"
+          rows={5}
+          className="w-full px-4 py-3 rounded-lg bg-white/10 text-white border border-purple-500/20 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 outline-none transition-all text-lg"
+        />
+      </div>
+      {error && <p className="text-pink-500 mb-4">{error}</p>}
+      <button
+        type="submit"
+        disabled={loading}
+        className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold rounded-full shadow-lg hover:shadow-purple-500/50 hover:scale-105 transition-all text-lg"
+      >
+        {loading ? "Envoi..." : "🚀 Envoyer le message"}
+      </button>
+    </form>
+  );
+};
